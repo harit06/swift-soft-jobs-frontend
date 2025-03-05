@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.bg-primary {
+  @apply dark:bg-[#060606] dark:text-white bg-gray-300 text-black;
+}
+
+.bg-nav {
+  @apply text-white bg-[#111111];
+}
+.row {
+  display: inline-flex;
+  margin-left: -50px;
+  margin-top: -32px;
+  overflow: hidden;
+}
+.row:nth-child(even) {
+  margin-left: 1px;
+}
+.hexagon {
+  position: relative;
+  height: 150px;
+  width: 130px;
+  margin: 1px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  transition: 2s;
+  @apply animate-pulse dark:bg-[#202020] bg-gray-100 transform;
+}
